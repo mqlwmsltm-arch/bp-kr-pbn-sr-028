@@ -505,11 +505,7 @@ nav.pager a, nav.post-pager a, nav[data-site-documents="true"] a { display:inlin
  <header>
  <div class="header-inner">
  <a href="/" class="logo">마포 셔츠룸</a>
- <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
- 
- 
- 
- </button>
+ <button class="hamburger" id="hamburger" aria-label="메뉴 열기" type="button" aria-controls="nav" aria-expanded="false" onclick="this.classList.toggle('active');const menu=document.querySelector('#nav ul');if(!menu)return;menu.classList.toggle('active',this.classList.contains('active'));const open=this.classList.contains('active');this.setAttribute('aria-expanded',String(open));this.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');if(open&&!this.__postIndexMenuCloseBound){this.__postIndexMenuCloseBound=true;menu.addEventListener('click',event=>{const target=event.target;if(target&&typeof target.closest==='function'&&target.closest(&quot;a[href^='#']&quot;)){this.classList.remove('active');menu.classList.remove('active');this.setAttribute('aria-expanded','false');this.setAttribute('aria-label','메뉴 열기')}})}"><span></span><span></span><span></span></button>
  <nav id="nav">
  <ul>
  <li><a href="#about">소개</a></li>
